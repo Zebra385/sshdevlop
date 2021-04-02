@@ -1,0 +1,37 @@
+{% extends "workshop/base.html" %}
+
+{% block title %}Détails Réalisations{% endblock %}
+{% block content %}
+	{% load static %}
+  <!-- +++++ Projects Section +++++ -->
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>PureBeurre</h3>
+        <hr>
+        <p>Ce site permet de trouver un substitut à un  aliment.</p>
+      </div>
+    </div>
+    <div class="row mt centered">
+      <div class="col-lg-5 col-lg-offset-4">
+        <p><img class="img-responsive" src="{% static 'workshop/img/portfolio/PureBeurre.png' %}" alt=""></p>
+      </div>
+
+      <div class="row mt ">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+        <p>Celui-ci il utilise l'API d'openfoodfacts. L'internaute à la possibilité de s'inscrire et d'enregistrer ces substituts préférés.
+        Il permet aussi de trouver le nutriscore, ainsi que les repères nutritionnels, tels que la masse de matières grasses/lipides, la masse d'
+        acide gras, la masse de sucre et celle de sel pour 100 g.
+        Enfin il est possible d'accéder à l'ensemble des renseignements via le site d'Openfooffacts.
+        </p>   
+        <p>
+          <bt>Lien: <a href="http://46.101.14.116/">Site_pureBeurre</a></bt>
+          <bt>Client: <a href="#">Openclassrooms</a></bt> -
+          <bt>Dépot GitHub: <a href="https://github.com/Zebra385/P11_PurBeurre_V2">GitHub Site PureBeurre</a></bt> -
+          <bt>Date: <a href="#">Novembre 2020</a></bt>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "workshop/base.html" %}
+
+{% block title %}Détails Réalisations{% endblock %}
+{% block content %}
+	{% load static %}
+
+
+  <!-- +++++ Projects Section +++++ -->
+
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>Grandpybot</h3>
+        <hr>
+        <p>Ce site permet de connaitre l'adresse d'un lieu. Papy Robot raconte une histoire sur le lieu!</p>
+      </div>
+    </div>
+    <div class="row mt centered">
+      <div class="col-lg-5 col-lg-offset-4">
+        <p><img class="img-responsive" src="{% static 'workshop/img/portfolio/Grandpybot.png' %}" alt=""></p>
+      </div>
+      <div class="row mt ">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+        <p>Celui-ci indique l'adresse d'un lieu, qu'il prècise sur une carte Google maps. 
+            Enfin Grandbybot raconte une petite histoire sur un terme de l'adresse.
+        </p>
+        <p>
+          <bt>Lien: <a href="https://grandpybotzebra385.herokuapp.com/">Site_Grandbybot</a></bt>
+          <bt>Client: <a href="#">Openclassrooms</a></bt> -
+          <bt>Dépot GitHub: <a href="https://github.com/Zebra385/P07_GrandPyBot">GitHub Site Grandpybot</a></bt> -
+          <bt>Date: <a href="#">Mai 2020</a></bt>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
