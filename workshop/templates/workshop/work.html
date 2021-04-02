@@ -1,0 +1,34 @@
+{% extends "workshop/base.html" %}
+
+{% block title %}Mes réalisations{% endblock %}
+{% block content %}
+	{% load static %}
+
+  <!-- +++++ Projects Section +++++ -->
+
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>Mes Réalisations</h3>
+        <hr>
+        <p>Pour le détail de mes travaux cliquer sur les images </p>
+      </div>
+    </div>
+    <div class="container pt">
+      <div class="row mt centered">
+        <div class="col-lg-4">
+          <a href="{% url 'workshop:work01' %}"><img class="img-responsive" src="{% static 'workshop/img/portfolio/TBD.png' %}" alt="" /></a>
+          <p>TBD</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="{% url 'workshop:work02' %}"><img class="img-responsive" src="{% static 'workshop/img/portfolio/PureBeurre.png' %}" alt="" /></a>
+          <p>PureBeurre</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="{% url 'workshop:work03' %}"><img class="img-responsive" src="{% static 'workshop/img/portfolio/Grandpybot.png' %}" alt="" /></a>
+          <p>Grandpybot</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+{% endblock %}
