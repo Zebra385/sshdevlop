@@ -1,6 +1,6 @@
 # sshdevlop
 ## 1. What is this project ?
-### It is a web site who present my new joj ofFreelancer
+### It is a web site who present my new job of Freelancer
 ### Building with Python Django Bootstrap
 ## 2. How to go on the web site ?
 ### You open a explorer than Firefox, Chrome or another
