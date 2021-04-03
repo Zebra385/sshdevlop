@@ -7,7 +7,7 @@
   <div id="ww">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-2 centered">
+        <div class="col-lg-8 col-lg-offset-2 centered">
           <div class="header-photo">
           <img src="{% static 'workshop/img/Houche_Serge.JPG' %}" alt="Serge">
           </div>
@@ -26,13 +26,13 @@
   <!-- Skills & Certificates -->
   <div class="container pt" id="Mesoutils">
     <div class="row mt">
-      <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Mes outils</h3>
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <h1>Mes outils</h1>
         <hr>
       </div>
     </div>
     <div class="row mt centered">
-      <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-8 col-lg-offset-2">
         <!-- codage Skills -->
         <div class="block-title">
           <h3> <span>Compétences </span>de codage</h3>
@@ -144,22 +144,24 @@
       </div>
     </div>
   </div>
-
+  <!-- section Parcourt-->
+  {% include 'workshop/parcourt.html' %}
+  
   <!-- /container -->
-  <div id="ww">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 centered">
-          
-          <h1>Mon tarif est de 275 € par jour </h1>
-          <p> N'hésitez pas à me contacter pour plus d'informations!  </p>
-
-        </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 centered">
         
+        <h1>Mon tarif est de 275 € par jour </h1>
+        <p> N'hésitez pas à me <a href="{% url 'contact:send' %}">contacter </a>pour plus d'informations!  </p>
+
       </div>
-    
+      
     </div>
-    
+  
   </div>
+  
+
 
 {% endblock %}

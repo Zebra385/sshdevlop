@@ -1,6 +1,6 @@
 from .views import AccueilView
 from django.urls import path, include
-from .views import AccueilView, WorkView, Work01View, AboutView, Work02View, Work03View
+from .views import AccueilView, WorkView, Work01View, Work02View, Work03View
 
 app_name = "workshop"
 

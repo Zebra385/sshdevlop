@@ -24,8 +24,7 @@ urlpatterns = [
     # importation of the urls from app workshop
     path('workshop/', include('workshop.urls')),
     path('contact/', include('contact.urls')),
-    path('cv', include('cv.urls')),
-]
+    ]
 
 if settings.DEBUG:
     import debug_toolbar

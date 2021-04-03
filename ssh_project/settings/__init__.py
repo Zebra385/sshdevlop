@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'workshop',
     'contact',
-    'cv',
 ]
 
 MIDDLEWARE = [
