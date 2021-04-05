@@ -28,15 +28,15 @@ class SendView(View):
             # auth_user=CustomUser.objects.get(pk=user.id)
             your_name = form.cleaned_data['your_name']
             sender = form.cleaned_data['sender']
-            print('sender i: ',sender)
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
+            message_complet = "Mme/Monsieur {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)
             send_mail(
                 subject,
-                message,
-                sender,
+                message_complet,
+                'houche.zebra385@gmail.com',
                 ['houche.zebra385@gmail.com',],
-                )
+                                )
             return HttpResponseRedirect(reverse('contact:confirm_message_send'))
         else:
             # for test
