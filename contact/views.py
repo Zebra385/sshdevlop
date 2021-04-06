@@ -6,8 +6,7 @@ from contact.forms import ContactForm
 from django.views.generic import TemplateView, View
 from django.core.mail import send_mail
 from django.contrib.auth import logout, login
-from django.contrib.auth import authenticate
-from ssh_project.settings import DATABASES
+
 # Create your views here.
 
 
@@ -33,16 +32,13 @@ class SendView(View):
             sender = form.cleaned_data['sender']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            message_complet = "Mme/Monsieur {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)
-            PASSWORD = DATABASES['default']['PASSWORD']
-            user = authenticate(username='zebra385', password=PASSWORD)
+            message_complet = "Mme/Monsieur {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)                               
             send_mail(
                 subject,
                 message_complet,
                 'houche.zebra385@gmail.com',
                 ['houche.zebra385@gmail.com',],
                                 )
-            
             return HttpResponseRedirect(reverse('contact:confirm_message_send'))
         else:
             # for test
