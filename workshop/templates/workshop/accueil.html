@@ -3,6 +3,9 @@
 {% block title %}Accueil SSHDEVLOP{% endblock %}
 {% block content %}
 	{% load static %}
+  {% load i18n static %}
+  {% load cookielaw_tags %}
+  {% include 'cookielaw/banner.html'%}
   <!-- +++++ Welcome Section +++++ -->
   <div id="ww">
     <div class="container">
@@ -20,110 +23,112 @@
     </div>
     <!-- /container -->
   </div>
-  <!-- /ww -->
+  <!-- section Mes réalisations-->
+  {% include 'workshop/work.html' %}
   <!-- Mesoutils -->
 
   <!-- Skills & Certificates -->
-  <div class="container pt" id="Mesoutils">
-    <div class="row mt">
-      <div class="col-lg-8 col-lg-offset-2 centered">
-        <h1>Mes outils</h1>
-        <hr>
+  <div id="ww">
+    <div class="container pt" id="Mesoutils">
+      <div class="row mt">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+          <h1>Mes outils</h1>
+          <hr>
+        </div>
       </div>
-    </div>
-    <div class="row mt centered">
-      <div class="col-lg-8 col-lg-offset-2">
-        <!-- codage Skills -->
-        <div class="block-title">
-          <h3> <span>Compétences </span>de codage</h3>
-        </div>
+      <div class="row mt centered">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- codage Skills -->
+          <div class="block-title">
+            <h3> <span>Compétences </span>de codage</h3>
+          </div>
 
-        <div class="skills-info skills-second-style">
-          <!-- Skill 1 -->
-          <div class="skill clearfix">
-            <h4>Python</h4>
-            <div class="skill-value">95%</div>
+          <div class="skills-info skills-second-style">
+            <!-- Skill 1 -->
+            <div class="skill clearfix">
+              <h4>Python</h4>
+              <div class="skill-value">95%</div>
+            </div>
+            <div class="skill-container skill-1">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 1 -->
+            
+            <!-- Skill 2 -->
+            <div class="skill clearfix">
+              <h4>HTML</h4>
+              <div class="skill-value">95%</div>
+            </div>
+            <div class="skill-container skill-1">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 2 -->
+            
+            <!-- Skill 3 -->
+            <div class="skill clearfix">
+              <h4>CSS</h4>
+              <div class="skill-value">95%</div>
+            </div>
+            <div class="skill-container skill-1">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 3 -->
+            
+            <!-- Skill 4 -->
+            <div class="skill clearfix">
+              <h4>Javascript</h4>
+              <div class="skill-value">75%</div>
+            </div>
+            <div class="skill-container skill-8">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 4 -->
+            
           </div>
-          <div class="skill-container skill-1">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 1 -->
-          
-          <!-- Skill 2 -->
-          <div class="skill clearfix">
-            <h4>HTML</h4>
-            <div class="skill-value">95%</div>
-          </div>
-          <div class="skill-container skill-1">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 2 -->
-          
-          <!-- Skill 3 -->
-          <div class="skill clearfix">
-            <h4>CSS</h4>
-            <div class="skill-value">95%</div>
-          </div>
-          <div class="skill-container skill-1">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 3 -->
-          
-          <!-- Skill 4 -->
-          <div class="skill clearfix">
-            <h4>Javascript</h4>
-            <div class="skill-value">75%</div>
-          </div>
-          <div class="skill-container skill-8">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 4 -->
-          
-        </div>
-        <!-- End of codage Skills -->
+          <!-- End of codage Skills -->
 
-        <div class="white-space-10"></div>
+          <div class="white-space-10"></div>
 
-        <!-- Frameworks Skills -->
-        <div class="block-title">
-          <h3> <span>Compétences </span> en Frameworks</h3>
-        </div>
-        <div class="skills-info skills-second-style">
-          <!-- Skill 5 -->
-          <div class="skill clearfix">
-            <h4>Django</h4>
-            <div class="skill-value">95%</div>
-          </div>              
-          <div class="skill-container skill-1">
-            <div class="skill-percentage"></div>
+          <!-- Frameworks Skills -->
+          <div class="block-title">
+            <h3> <span>Compétences </span> en Frameworks</h3>
           </div>
-          <!-- End of Skill 5 -->
-        
-
-          <!-- Skill 6 -->
-          <div class="skill clearfix">
-            <h4>Bootstrap</h4>
-            <div class="skill-value">95%</div>
-          </div>
-          <div class="skill-container skill-1">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 6 -->
+          <div class="skills-info skills-second-style">
+            <!-- Skill 5 -->
+            <div class="skill clearfix">
+              <h4>Django</h4>
+              <div class="skill-value">95%</div>
+            </div>              
+            <div class="skill-container skill-1">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 5 -->
           
-          <!-- Skill 7 -->
-          <div class="skill clearfix">
-            <h4>Flask</h4>
-            <div class="skill-value">75%</div>
-          </div>
-          <div class="skill-container skill-8">
-            <div class="skill-percentage"></div>
-          </div>
-          <!-- End of Skill 7 -->
-                                  
-        </div>
-        <!-- End of Coding Skills -->
 
-        <div class="white-space-10"></div>
+            <!-- Skill 6 -->
+            <div class="skill clearfix">
+              <h4>Bootstrap</h4>
+              <div class="skill-value">95%</div>
+            </div>
+            <div class="skill-container skill-1">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 6 -->
+            
+            <!-- Skill 7 -->
+            <div class="skill clearfix">
+              <h4>Flask</h4>
+              <div class="skill-value">75%</div>
+            </div>
+            <div class="skill-container skill-8">
+              <div class="skill-percentage"></div>
+            </div>
+            <!-- End of Skill 7 -->
+                                    
+          </div>
+          <!-- End of Coding Skills -->
+
+          <div class="white-space-10"></div>
 
         <!-- Knowledges -->
         <div class="block-title">
@@ -144,24 +149,26 @@
       </div>
     </div>
   </div>
+  </div>
   <!-- section Parcourt-->
   {% include 'workshop/parcourt.html' %}
   
   <!-- /container -->
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 centered">
-        
-        <h1>Mon tarif est de 275 € par jour </h1>
-        <p> N'hésitez pas à me <a href="{% url 'contact:send' %}">contacter </a>pour plus d'informations!  </p>
+<div id="ww">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+          
+          <h1>Mon tarif est de 275 € par jour </h1>
+          <p> N'hésitez pas à me <a href="{% url 'contact:send' %}" style=" color:#04e021;">contacter </a>pour plus d'informations!  </p>
 
+        </div>
+        
       </div>
-      
+    
     </div>
-  
-  </div>
-  
+
+</div>
 
 
 {% endblock %}

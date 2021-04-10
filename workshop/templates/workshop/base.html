@@ -23,7 +23,8 @@
 
   <!-- Main Stylesheet File -->
   <link href="{% static 'workshop/css/style.css' %}" rel="stylesheet">
-
+  <!-- cookielaw CSS -->
+  <link href="{% static 'cookielaw/css/cookielaw.css' %}" rel="stylesheet" />
   <!-- =======================================================
     Template Name: Stanley
     Template URL: https://templatemag.com/stanley-bootstrap-freelancer-template/
@@ -48,7 +49,7 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/#Mesoutils">Mes outils</a></li>
-          <li><a href="{% url 'workshop:work' %}">Mes réalisations</a></li>
+          <li><a href="/#Mesrealisations">Mes réalisations</a></li>
           <li><a href="/#Parcourt">Mon parcours</a></li>
           
           <li><a href="{% url 'contact:send' %}">Contact</a></li>
@@ -122,6 +123,6 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'workshop/js/main.js' %}"></script>
-
+  <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
 </body>
 </html>
