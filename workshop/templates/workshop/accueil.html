@@ -3,10 +3,14 @@
 {% block title %}Accueil SSHDEVLOP{% endblock %}
 {% block content %}
 	{% load static %}
-  {% load i18n static %}
-  {% load cookielaw_tags %}
-  {% cookielaw_banner%}
-  <!-- +++++ Welcome Section +++++ -->
+
+    
+  
+ 
+          
+
+   
+ <!-- +++++ Welcome Section +++++ -->
   <div id="wb">
     <div class="container">
       <div class="row">
@@ -19,10 +23,20 @@
           <p> Ce site présente mes réalisations et mon parcours.
         </div>
         
-      </div>
-    </div>
-    <!-- /container -->
+      </div>   
+    </div>    
   </div>
+              {% load i18n static %}
+                {% load cookielaw_tags %}
+                {% cookielaw_banner%}
+        
+    
+          
+      
+      
+    
+    <!-- /container -->
+ 
   <!-- section Mes réalisations-->
   {% include 'workshop/work.html' %}
   <!-- Mesoutils -->
