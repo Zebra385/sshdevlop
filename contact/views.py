@@ -34,7 +34,7 @@ class SendView(View):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             message_complet = "Mme/M. {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)   
-            message_expeditor = "Mme/M. {} dont l\'adresse email est : {} a envoyer à sshdevlop le message suivant :\n{}".format(your_name, sender, message)                             
+            message_expeditor = "Mme/M. {}, dont l\'adresse email est : {}, a envoyé à sshdevlop le message suivant :\n{}".format(your_name, sender, message)                             
             send_mail(
                 subject,
                 message_complet,
