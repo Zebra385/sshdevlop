@@ -26,18 +26,27 @@ class SendView(View):
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
-            
+            sender_address = []
             # auth_user=CustomUser.objects.get(pk=user.id)
             your_name = form.cleaned_data['your_name']
             sender = form.cleaned_data['sender']
+            sender_address.append(sender)
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            message_complet = "Mme/Monsieur {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)                               
+            message_complet = "Mme/M. {} dont l\'adresse email est : {} qui m'envoi à sshdevlop le message suivant :\n{}".format(your_name, sender, message)   
+            message_expeditor = "Mme/M. {} dont l\'adresse email est : {} a envoyer à sshdevlop le message suivant :\n{}".format(your_name, sender, message)                             
             send_mail(
                 subject,
                 message_complet,
                 'houche.zebra385@gmail.com',
                 ['houche.zebra385@gmail.com',],
+                                )
+            subject_copy = "Copie de {}".format(subject)
+            send_mail(
+                subject_copy,
+                message_expeditor,
+                'houche.zebra385@gmail.com',
+                sender_address,
                                 )
             return HttpResponseRedirect(reverse('contact:confirm_message_send'))
         else:

@@ -7,7 +7,7 @@
 
 
   <!-- +++++ Contact Section +++++ -->
-<div id="ww">
+<div id="wb">
   <div class="container pt">
     <div class="row mt">
       <div class="col-lg-6 col-lg-offset-3 centered">
@@ -21,23 +21,23 @@
         
         <form  action="" method="POST">
           {% csrf_token %}
-            <div class="form-group">
+            <div class="contact-form">
               <label for="{{ form.your_name.id_for_label }}">Votre nom:</label>
               {{ form.your_name }}
-              
+            
             </div>
-            <div class="form-group">
+            <div class="contact-form">
               <label for="{{ form.sender.id_for_label }}">Votre email:</label>
               {{ form.sender }}
               
             </div>
-            <div class="form-group">
+            <div class="contact-form">
               <label for="{{ form.subject.id_for_label }}">Sujet:</label>
               {{ form.subject }}
               
             </div>
 
-            <div class="form-group">
+            <div class="contact-form">
               <label for="{{ form.message.id_for_label }}">Votre message:</label>
               {{ form.message }}
               

@@ -140,9 +140,18 @@ hr {
   padding-bottom: 70px;
   background-color: #f2f2f2;
 }
+#wb {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #2f2f2f;
+}
+
+#wb p, h1, h2, h3 ,h4{
+  color: white;
+}
 
 #footer {
-  background-color: #2f2f2f;
+  background-color: #0f224d;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -247,10 +256,12 @@ bt {
 .contact-form {}
 
 .contact-form label {
-  color: #999;
+  color: rgb(243, 232, 232);
+  font-size: 18px;
 }
 
 .contact-form input, .contact-form textarea {
+  margin:5px;
   padding: 10px 12px;
   border-radius: 0;
   box-shadow: none;
